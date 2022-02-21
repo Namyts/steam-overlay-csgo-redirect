@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import classes from './App.module.css'
+
+const parseLink = (link) => {
+	if(true){}
+	return {}
 }
 
-export default App;
+const App = () => {
+	//example link: https://steamcommunity.com/id/jamesstyman/
+
+	const DEBUG_MODE = true
+	const goToSite = (url,options={}) => {
+		console.log(`going to: ${url}`)
+		!options.debug && window.location.replace(url)
+	}
+
+	useEffect(()=>{
+		if(!navigator.clipboard){return}
+		return navigator.clipboard.readText()
+		.then(clipboardText=>{
+			console.log(`clipboard: ${clipboardText}`)
+			const linkInfo = parseLink(clipboardText)
+
+			if(linkInfo){
+				if(linkInfo.id){
+					goToSite(`https://csgostats.gg/player/${linkInfo.id}`,{debug: DEBUG_MODE})
+				} else {
+					goToSite(`https://csgostats.gg`,{debug: DEBUG_MODE})
+				}				
+			} else {
+				goToSite('https://www.google.com',{debug: DEBUG_MODE})
+			}
+		})
+		.catch(err=>console.error(err))
+	})
+
+	return (
+		<div className={classes["root"]}>
+			{navigator.clipboard ? `Redirecting...` : `Browser can't read clipboard`}
+		</div>
+	)
+}
+export default App
