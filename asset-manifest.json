@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/steam-overlay-csgo-redirect/static/css/main.88da0191.css",
-    "main.js": "/steam-overlay-csgo-redirect/static/js/main.75ca70a9.js",
+    "main.css": "/steam-overlay-csgo-redirect/static/css/main.040cbf59.css",
+    "main.js": "/steam-overlay-csgo-redirect/static/js/main.7b8f6a93.js",
     "index.html": "/steam-overlay-csgo-redirect/index.html",
-    "main.88da0191.css.map": "/steam-overlay-csgo-redirect/static/css/main.88da0191.css.map",
-    "main.75ca70a9.js.map": "/steam-overlay-csgo-redirect/static/js/main.75ca70a9.js.map"
+    "main.040cbf59.css.map": "/steam-overlay-csgo-redirect/static/css/main.040cbf59.css.map",
+    "main.7b8f6a93.js.map": "/steam-overlay-csgo-redirect/static/js/main.7b8f6a93.js.map"
   },
   "entrypoints": [
-    "static/css/main.88da0191.css",
-    "static/js/main.75ca70a9.js"
+    "static/css/main.040cbf59.css",
+    "static/js/main.7b8f6a93.js"
   ]
 }
