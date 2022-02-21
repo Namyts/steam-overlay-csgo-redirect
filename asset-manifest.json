@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/steam-overlay-csgo-redirect/static/css/main.88da0191.css",
+    "main.js": "/steam-overlay-csgo-redirect/static/js/main.f651afa8.js",
+    "index.html": "/steam-overlay-csgo-redirect/index.html",
+    "main.88da0191.css.map": "/steam-overlay-csgo-redirect/static/css/main.88da0191.css.map",
+    "main.f651afa8.js.map": "/steam-overlay-csgo-redirect/static/js/main.f651afa8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88da0191.css",
+    "static/js/main.f651afa8.js"
+  ]
+}
