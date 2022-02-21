@@ -55,9 +55,20 @@ const App = () => {
 		.catch(err=>console.error(err))
 	})
 
+	const links = [
+		{name: "Google", url: "www.google.com"},
+		{name: "CsgoStats", url: "www.csgostats.gg"}
+	]
+	const OtherLinks = links.map(link=>(
+		<div className={classes['button']} onClick={()=>goToSite(link.url)}>
+			{link.name}
+		</div>
+	))
+
 	return (
 		<div className={classes["root"]}>
-			{navigator.clipboard ? `Redirecting...` : `Browser can't read clipboard`}
+			<div>{navigator.clipboard ? `Redirecting...` : `Browser can't read clipboard`}</div>
+			<div className={classes["buttons"]}>{OtherLinks}</div>
 		</div>
 	)
 }
