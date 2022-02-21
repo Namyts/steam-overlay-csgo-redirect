@@ -31,7 +31,7 @@ const parseLink = (link) => {
 }
 
 const App = () => {
-	const DEBUG_MODE = true
+	const DEBUG_MODE = false
 	const goToSite = (url,options={}) => {
 		console.log(`going to: ${url}`)
 		!options.debug && window.location.replace(url)

@@ -1,7 +1,7 @@
 {
 	"name": "csgo-redirect",
 	"version": "0.1.0",
-	"homepage": "http://Namyts.github.io/steam-overlay-csgo-redirect",
+	"homepage": "http://namyts.github.io/steam-overlay-csgo-redirect",
 	"private": true,
 	"dependencies": {
 		"react": "^17.0.2",
