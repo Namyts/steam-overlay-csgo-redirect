@@ -3,14 +3,34 @@ import {useNavigate} from 'react-router-dom'
 
 import classes from './App.module.css'
 
+RegExp.quote = (str) => str.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1")
+
 const parseLink = (link) => {
-	if(true){}
-	return {}
+	//examples: https://steamcommunity.com/id/jamesstyman/
+	//or: https://steamcommunity.com/profiles/76561199072322454
+	//or: 76561199072322454
+	//note: Vanity links arent resolved to profile id because I dont want to use the steam api for this
+
+	const matchLink = link.match(`.*steamcommunity.com/(.*)/(.*)`)
+	const matchNumber = link.match(/\d{17}/)
+	
+	console.log(matchLink)
+	if(matchLink){
+		const profileType = matchLink[1]
+		if(profileType === 'profiles'){
+			return {id: matchLink[2]}
+		} else {
+			return {id: null}
+		}
+	}
+
+	console.log(matchNumber)
+	if(matchNumber){ return {id: matchNumber[0]} }
+
+	return null
 }
 
 const App = () => {
-	//example link: https://steamcommunity.com/id/jamesstyman/
-
 	const DEBUG_MODE = true
 	const goToSite = (url,options={}) => {
 		console.log(`going to: ${url}`)
