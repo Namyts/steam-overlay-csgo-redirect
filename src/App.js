@@ -1,6 +1,4 @@
 import {useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
-
 import classes from './App.module.css'
 
 RegExp.quote = (str) => str.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1")
