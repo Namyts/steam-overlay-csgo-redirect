@@ -56,8 +56,8 @@ const App = () => {
 	})
 
 	const links = [
-		{name: "Google", url: "www.google.com"},
-		{name: "CsgoStats", url: "www.csgostats.gg"}
+		{name: "Google", url: "https://www.google.com"},
+		{name: "CsgoStats", url: "https://www.csgostats.gg"}
 	]
 	const OtherLinks = links.map(link=>(
 		<div className={classes['button']} onClick={()=>goToSite(link.url)}>
